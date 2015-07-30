@@ -3,9 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Регистрация</title>
+<title>Управление балансами пользователей</title>
 </head>
 <body>
-<h1>Регистрация</h1>
+<h1>Управление балансами пользователей</h1>
 </body>
 </html>

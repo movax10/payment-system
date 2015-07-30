@@ -20,7 +20,16 @@
          <artifactId>spring-webmvc</artifactId>
          <version>4.1.7.RELEASE</version>
       </dependency>
-
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>4.3.10.Final</version>
+      </dependency>
+      <dependency>
+         <groupId>mysql</groupId>
+         <artifactId>mysql-connector-java</artifactId>
+         <version>5.1.36</version>
+      </dependency>
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
@@ -28,4 +37,24 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>maven-jetty-plugin</artifactId>
+            <version>6.1.10</version>
+            <configuration>
+               <scanIntervalSeconds>10</scanIntervalSeconds>
+               <connectors>
+                  <connector
+                     implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                     <port>8080</port>
+                     <maxIdleTime>60000</maxIdleTime>
+                  </connector>
+               </connectors>
+            </configuration>
+         </plugin>
+      </plugins>
+   </build>
 </project>
