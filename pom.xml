@@ -10,8 +10,34 @@
    <name>payment-system</name>
    <url>http://maven.apache.org</url>
 
+   <repositories>
+      <repository>
+         <id>eap</id>
+         <url>http://maven.repository.redhat.com/techpreview/all</url>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>true</enabled>
+         </snapshots>
+      </repository>
+   </repositories>
+   <pluginRepositories>
+      <pluginRepository>
+         <id>eap</id>
+         <url>http://maven.repository.redhat.com/techpreview/all</url>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>true</enabled>
+         </snapshots>
+      </pluginRepository>
+   </pluginRepositories>
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.6</maven.compiler.source>
+      <maven.compiler.target>1.6</maven.compiler.target>
    </properties>
 
    <dependencies>
@@ -39,7 +65,6 @@
    </dependencies>
 
    <build>
-      <sourceDirectory>src/main/java</sourceDirectory>
       <plugins>
          <plugin>
             <groupId>org.mortbay.jetty</groupId>
